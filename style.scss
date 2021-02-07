@@ -1,0 +1,66 @@
+// ------------------------Mes polices------------------------
+@font-face {
+    font-family: 'Roboto regular'; 
+    src: url("Roboto/Roboto-regular.ttf"); 
+    src: url("Roboto/roboto-regular.woff") format("woff"), 
+         url("Roboto/roboto-regular.eot") format("eot"),
+         url("Roboto/roboto-regular.svg") format("svg");
+}
+@font-face {
+    font-family: 'Shrikhand'; 
+    src: url("Shrikhand/shrikhand-regular.ttf"); 
+    src: url("Shrikhand/shrikhand-regular.woff") format("woff"),
+         url("Shrikhand/shrikhand-regular.eot") format("eot"), 
+         url("Shrikhand/shrikhand-regular.svg") format("svg");
+}
+// ------------------------Mes variables------------------------
+$text: 'Roboto regular'; 
+$title: 'Shrikhand'; 
+
+//------------------------Mise en forme------------------------
+body {
+    font-family: $text;
+}
+.header {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+
+    &__title {
+        font-family: $title;
+        text-align: center;
+        margin: 0;
+    }
+}
+.local {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    background-color: rgb(243, 243, 243);
+    font-size: 1.2rem;
+
+    &__icon{
+        margin-right: 1em; 
+    }
+    &__text {
+        font-weight: 700;
+    }
+}
+.info {
+    background-color: rgb(250,250,250);
+    text-align: center;
+    &__title {
+        margin: 0;
+    }
+    &__description {
+        margin: 1.5rem 0; 
+        font-weight: 300;
+    }
+    &__btn {
+        color: white; 
+        background: linear-gradient(to bottom, #FF79DA, #9356DC);
+        font-weight: bold;
+        padding: 1rem;
+        border-radius: 50px; 
+        text-decoration: none;
+    }
+}

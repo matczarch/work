@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Roboto regular';
+  src: url("Roboto/Roboto-regular.ttf");
+  src: url("Roboto/roboto-regular.woff") format("woff"), url("Roboto/roboto-regular.eot") format("eot"), url("Roboto/roboto-regular.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'Shrikhand';
+  src: url("Shrikhand/shrikhand-regular.ttf");
+  src: url("Shrikhand/shrikhand-regular.woff") format("woff"), url("Shrikhand/shrikhand-regular.eot") format("eot"), url("Shrikhand/shrikhand-regular.svg") format("svg");
+}
+
+body {
+  font-family: "Roboto regular";
+}
+
+.header {
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+}
+
+.header__title {
+  font-family: "Shrikhand";
+  text-align: center;
+  margin: 0;
+}
+
+.local {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f3f3f3;
+  font-size: 1.2rem;
+}
+
+.local__icon {
+  margin-right: 1em;
+}
+
+.local__text {
+  font-weight: 700;
+}
+
+.info {
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.info__title {
+  margin: 0;
+}
+
+.info__description {
+  margin: 1.5rem 0;
+  font-weight: 300;
+}
+
+.info__btn {
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
