@@ -1,66 +1,244 @@
 // ------------------------Mes polices------------------------
 @font-face {
-    font-family: 'Roboto regular'; 
-    src: url("Roboto/Roboto-regular.ttf"); 
-    src: url("Roboto/roboto-regular.woff") format("woff"), 
-         url("Roboto/roboto-regular.eot") format("eot"),
-         url("Roboto/roboto-regular.svg") format("svg");
+  font-family: "Roboto regular";
+  src: url("Roboto/Roboto-regular.ttf");
+  src: url("Roboto/roboto-regular.woff") format("woff"),
+    url("Roboto/roboto-regular.eot") format("eot"),
+    url("Roboto/roboto-regular.svg") format("svg");
 }
 @font-face {
-    font-family: 'Shrikhand'; 
-    src: url("Shrikhand/shrikhand-regular.ttf"); 
-    src: url("Shrikhand/shrikhand-regular.woff") format("woff"),
-         url("Shrikhand/shrikhand-regular.eot") format("eot"), 
-         url("Shrikhand/shrikhand-regular.svg") format("svg");
+  font-family: "Shrikhand";
+  src: url("Shrikhand/shrikhand-regular.ttf");
+  src: url("Shrikhand/shrikhand-regular.woff") format("woff"),
+    url("Shrikhand/shrikhand-regular.eot") format("eot"),
+    url("Shrikhand/shrikhand-regular.svg") format("svg");
 }
 // ------------------------Mes variables------------------------
-$text: 'Roboto regular'; 
-$title: 'Shrikhand'; 
+$text: "Roboto regular";
+$title: "Shrikhand";
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
 
 //------------------------Mise en forme------------------------
 body {
-    font-family: $text;
+  font-family: $text;
 }
 .header {
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-    padding: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 1rem;
 
-    &__title {
-        font-family: $title;
-        text-align: center;
-        margin: 0;
-    }
+  &__title {
+    font-family: $title;
+    text-align: center;
+    margin: 0;
+  }
 }
 .local {
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    background-color: rgb(243, 243, 243);
-    font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(243, 243, 243);
+  font-size: 1.2rem;
 
-    &__icon{
-        margin-right: 1em; 
-    }
-    &__text {
-        font-weight: 700;
-    }
+  &__icon {
+    margin-right: 1em;
+  }
+  &__text {
+    font-weight: 700;
+  }
 }
 .info {
-    background-color: rgb(250,250,250);
-    text-align: center;
-    &__title {
-        margin: 0;
+  display: flex; 
+  flex-direction: column;
+  background-color: rgb(250, 250, 250);
+  text-align: center;
+  &__title {
+    margin: 0;
+  }
+  &__description {
+    margin: 1.5rem 0;
+    font-weight: 300;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin: 1.5em 0; 
+    
+    &__button {
+      width: 12.5rem;
+      text-decoration: none;
+      background: linear-gradient(to bottom, #ff79da, #9356dc);
+      padding: 1rem;
+      border-radius: 50px;
+      color: inherit;
+      &:hover {
+        opacity: 0.85; 
+        transition-duration: 400ms; 
+      }
     }
-    &__description {
-        margin: 1.5rem 0; 
-        font-weight: 300;
+    
+  }
+}
+//------------------------Mise en forme du tuto------------------------
+.fonct {
+    &__steps {
+      display: flex; 
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none; 
+      counter-reset: compteListe; 
+      margin: 0; 
+      padding: 0;
+    }
+    &__step {
+      width: 85%;
+      display: flex; 
+      align-items: center; 
+      //justify-content: center;
+      padding: 1.5em; 
+      background-color: #F6F6F6;
+      border-radius: 1.25em; 
+      box-shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.25);
+      margin: 1em 0 1em 0.75em;
+      position: relative;
+
+      .text {
+        font-weight: bold;
+      }
+
+      &::before {
+        content: counter(compteListe);
+        width: 1.5em; 
+        height: 1.5em;
+        color: white; 
+        counter-increment: compteListe 1; 
+        border-radius: 100px; 
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        background-color:#9356dc;
+        position: absolute;
+        left: -0.75em;
+      }
+      &:hover {
+        background-color: #F5EDFF;
+        .fonct__icon {
+          color: $color-primary;
+        }
+      }
+      
+    }
+    &__icon {
+        margin-right: 1em; 
+        color: grey;
+    }
+}
+//------------------------Mise en forme des menus------------------------
+.menus {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .menu {
+    display: flex; 
+    justify-content: space-around;
+    margin: 10px 3px 10px 10px;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0 0.5rem black;
+    border-radius: 1rem;
+    text-decoration: none;
+    //display: block; 
+    color: inherit;
+
+    &__img {
+      height: 12.5em;
+      width: 25em;
+      border-radius: 1em 1em 0 0;
+      box-shadow: none;
+      object-fit: cover;
+    }
+    &__badge {
+      background-color: $color-tertiary;
+      color: darken($color-tertiary, 50%);
+      padding: 0.5em;
+      border-radius: 0.125em;
+      position: absolute;
+      top: 1em; 
+      right: 0.52em; 
+    }
+    &__decription {
+      margin: 0; 
+      padding: 0; 
+      font-family: $text;
+    }
+
+    &__footer {
+      padding: 0 1em; 
+      position: relative; 
+      display: flex; 
+      align-items: center; 
     }
     &__btn {
-        color: white; 
-        background: linear-gradient(to bottom, #FF79DA, #9356DC);
-        font-weight: bold;
-        padding: 1rem;
-        border-radius: 50px; 
-        text-decoration: none;
+      height: 2rem;
+      width: 2rem;
+      padding: 0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position: absolute;
+      right: 2em; 
     }
+  
+    &__like {
+      background-color: white!important;
+    }
+  }
+}
+//------------------------Mise en forme du footer------------------------
+.footer {
+  background-color: #353535;
+  .contain {
+    display: flex; 
+    flex-direction: column;
+    padding: 1em; 
+  }
+ 
+  &__logo {
+    color: white; 
+    font-family: $title;
+    font-size: 1.2em; 
+    margin: 0;
+    margin-bottom: 1em;
+  }
+  &__list {
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+  }
+  &__listElt {
+    margin: 0.5em 0; 
+
+    &:first-child {
+      margin-top: 0; 
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__link {
+    color: white; 
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__icon {
+    width: 1.2em;
+    margin-right: 0.5em;
+  }
 }

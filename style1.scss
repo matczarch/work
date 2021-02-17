@@ -1,0 +1,310 @@
+// ------------------------Mes polices------------------------
+@font-face {
+    font-family: "Roboto regular";
+    src: url("Roboto/Roboto-regular.ttf");
+    src: url("Roboto/roboto-regular.woff") format("woff"),
+      url("Roboto/roboto-regular.eot") format("eot"),
+      url("Roboto/roboto-regular.svg") format("svg");
+  }
+  @font-face {
+    font-family: "Shrikhand";
+    src: url("Shrikhand/shrikhand-regular.ttf");
+    src: url("Shrikhand/shrikhand-regular.woff") format("woff"),
+      url("Shrikhand/shrikhand-regular.eot") format("eot"),
+      url("Shrikhand/shrikhand-regular.svg") format("svg");
+  }
+  // ------------------------Mes variables------------------------
+$text: "Roboto regular";
+$title: "Shrikhand";
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+//------------------------Mise en forme------------------------
+body {
+    font-family: $text;
+}
+
+.header {
+    padding: 1em 1em; 
+    box-shadow: 0 0 0.5em rgba(0,0,0, 0.25);
+    position: relative; 
+    &--withback {
+        position: relative; 
+    }
+    &__logo {
+        font-family: $title;
+        text-align: center;
+        margin: 0;
+    }
+    &__arrow {
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+        width: 2em;
+        height: 2em;
+        font-size: 1.2em;
+        color: black;
+        position: absolute; 
+        left: 2em; 
+    }
+}
+.restaurantImg {
+    max-width: 100%;
+    max-height: 32rem;
+    width: 100%;
+    object-fit: cover;
+}
+.menu {
+    margin-top: -4em; 
+    border-radius: 2em 2em 0 0; 
+    background-color: #f6f6f6;
+    position: relative;
+    z-index: 1; 
+
+    &__header {
+        display: flex; 
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em 2em 0 1em; 
+    }
+    &__title {
+        font-family: $title;
+    }
+    &__btn {
+        height: 2em;
+        width: 2em;
+        font-size: 1.2em;
+        background-color: transparent;
+        border: transparent 0px solid;
+        padding: 0;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        cursor: pointer;
+        position: relative;
+        background-color: black;
+        
+        &:hover::before {
+          opacity: 1;
+        }
+        
+        &::before {
+          opacity: 0;
+          transition: 0.5s;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+        }
+      }
+      &__like {
+        transition-duration: .25s;
+        background-color: #f6f6f6;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        mix-blend-mode: lighten;
+      }
+      &__btn:hover {
+        .menu__like {
+          &--noBg {
+            opacity: 0;
+          }
+        }
+      }
+}
+.submenus {
+    display: grid; 
+}
+
+.submenu {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 1em; 
+    &__title {
+        text-transform: uppercase;
+        position: relative; 
+        padding-bottom: 0.5em;
+        font-weight: normal;
+
+        &::after {
+            content: ""; 
+            width: 3em;
+            height: 0.25em;
+            background-color: $color-tertiary;
+            position: absolute;
+            left: 0; 
+            bottom: 0;
+        }
+    }
+}
+//------------------------Mise en forme des menus------------------------
+@keyframes FadeinUp {
+    0% {
+      transform: translateY(100px); 
+      opacity:0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1; 
+    }
+  }
+.menuItem {
+    max-width: 100%;
+    display: flex;
+    background-color: white;
+    padding: 1em; 
+    border-radius: 0.75em; 
+    box-shadow: 0.25em 0.25em 1em rgba(0,0,0, 0.1);
+    overflow: hidden;
+    margin: 1em 0;
+    animation : FadeinUp 1s; 
+    animation-fill-mode: both;
+
+    &__header {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: inherit;
+        flex: 1;
+    }
+    &__title {
+        margin: 0; 
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: inherit;
+    }
+    &__decription {
+        margin:0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: inherit;
+    }
+    &__price {
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: 0.5em;
+        margin-right: 2em;
+        
+    }
+
+    &__confirmation {
+        width: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-tertiary;
+        margin: -1em -6em -1em -1em;
+        transition-duration: 0.5s;
+    }
+    &:hover &__confirmation {
+        margin-right: -1rem;
+      }
+    
+      &__checkIcon {
+        width: 2em;
+        height: 2em;
+        font-size: 1.2em;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background-color: white;
+        border-radius: 100px;
+        transform: rotate(180deg);
+        transition-duration: 0.5s;
+    
+      }
+    
+      &:hover &__checkIcon {
+        transform: rotate(0);
+      }
+
+      &__icon {
+        color: $color-tertiary;
+      }
+}
+//------------------------Mise en forme du bouton Commander------------------------
+.btn {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 3em 0; 
+    &__command {
+        font-family: $text;
+        color: white;
+        font-size: 1.1em; 
+        border: 0; 
+        padding: 0.75em 3em; 
+        border-radius: 100px; 
+        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+        cursor: pointer;
+        box-shadow: 0.25em 0.25em 10px rgba(0, 0, 0, 0.25);
+        transform: scale(1);
+
+        &:hover {
+            text-decoration: none;
+            opacity: 0.85; 
+            box-shadow: 0.25em 0.25em 10px rgba(0, 0, 0, 0.50);
+            transform: scale(1.05);
+            transition-duration: 400ms; 
+            
+        }
+    }
+
+     
+}
+//------------------------Mise en forme du footer------------------------
+.footer {
+    background-color: #353535;
+    .contain {
+      display: flex; 
+      flex-direction: column;
+      padding: 1em; 
+    }
+   
+    &__logo {
+      color: white; 
+      font-family: $title;
+      font-size: 1.2em; 
+      margin: 0;
+      margin-bottom: 1em;
+    }
+    &__list {
+      list-style: none;
+      padding: 0; 
+      margin: 0; 
+    }
+    &__listElt {
+      margin: 0.5em 0; 
+  
+      &:first-child {
+        margin-top: 0; 
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__link {
+      color: white; 
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &__icon {
+      width: 1.2em;
+      margin-right: 0.5em;
+    }
+  }
+
+
