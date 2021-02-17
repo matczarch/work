@@ -51,7 +51,7 @@ body {
 }
 .restaurantImg {
     max-width: 100%;
-    max-height: 32rem;
+    max-height: 32em;
     width: 100%;
     object-fit: cover;
 }
@@ -75,7 +75,7 @@ body {
         height: 2em;
         width: 2em;
         font-size: 1.2em;
-        background-color: transparent;
+        //background-color: transparent;
         border: transparent 0px solid;
         padding: 0;
         display:flex;
@@ -90,15 +90,15 @@ body {
         }
         
         &::before {
-          opacity: 0;
-          transition: 0.5s;
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+            content: "";
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background:linear-gradient(to bottom right, $color-secondary, $color-primary);
+            transition: 1s;
         }
       }
       &__like {
@@ -116,7 +116,7 @@ body {
       }
       &__btn:hover {
         .menu__like {
-          &--noBg {
+          &--noR {
             opacity: 0;
           }
         }
@@ -124,6 +124,9 @@ body {
 }
 .submenus {
     display: grid; 
+    @media (min-width:64rem) {
+        grid-template-columns: repeat(3,1fr);
+      }
 }
 
 .submenu {
@@ -183,7 +186,7 @@ body {
         overflow: inherit;
     }
     &__decription {
-        margin:0;
+        margin: 0;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: inherit;
@@ -208,8 +211,11 @@ body {
         transition-duration: 0.5s;
     }
     &:hover &__confirmation {
-        margin-right: -1rem;
+        margin-right: -1em;
       }
+    &:link &__confirmation {
+        margin-right: -1em;
+    }
     
       &__checkIcon {
         width: 2em;
@@ -228,6 +234,10 @@ body {
       &:hover &__checkIcon {
         transform: rotate(0);
       }
+      &:link &__checkIcon {
+        transform: rotate(0);
+      }
+      
 
       &__icon {
         color: $color-tertiary;
