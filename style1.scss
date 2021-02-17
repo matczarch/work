@@ -213,7 +213,7 @@ body {
     &:hover &__confirmation {
         margin-right: -1em;
       }
-    &:link &__confirmation {
+    &:active &__confirmation {
         margin-right: -1em;
     }
     
@@ -234,7 +234,7 @@ body {
       &:hover &__checkIcon {
         transform: rotate(0);
       }
-      &:link &__checkIcon {
+      &:active &__checkIcon {
         transform: rotate(0);
       }
       

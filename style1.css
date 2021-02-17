@@ -283,7 +283,7 @@ body {
   margin-right: -1em;
 }
 
-.menuItem:link .menuItem__confirmation {
+.menuItem:active .menuItem__confirmation {
   margin-right: -1em;
 }
 
@@ -313,7 +313,7 @@ body {
           transform: rotate(0);
 }
 
-.menuItem:link .menuItem__checkIcon {
+.menuItem:active .menuItem__checkIcon {
   -webkit-transform: rotate(0);
           transform: rotate(0);
 }
