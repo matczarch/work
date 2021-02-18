@@ -187,7 +187,7 @@ body {
         margin: -1em -6em -1em -1em;
         transition-duration: 0.5s;
     }
-    &:active &__confirmation {
+    &:hover &__confirmation {
         margin-right: -1em;
       }
     
@@ -205,7 +205,7 @@ body {
     
       }
     
-      &:active &__checkIcon {
+      &:hover &__checkIcon {
         transform: rotate(0);
       }
       

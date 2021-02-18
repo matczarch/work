@@ -595,7 +595,7 @@ body {
           transition-duration: 0.5s;
 }
 
-.menuItem:active .menuItem__confirmation {
+.menuItem:hover .menuItem__confirmation {
   margin-right: -1em;
 }
 
@@ -620,7 +620,7 @@ body {
           transition-duration: 0.5s;
 }
 
-.menuItem:active .menuItem__checkIcon {
+.menuItem:hover .menuItem__checkIcon {
   -webkit-transform: rotate(0);
           transform: rotate(0);
 }
