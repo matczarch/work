@@ -1,13 +1,11 @@
 @font-face {
   font-family: "Roboto regular";
-  src: url("Roboto/Roboto-regular.ttf");
-  src: url("Roboto/roboto-regular.woff") format("woff"), url("Roboto/roboto-regular.eot") format("eot"), url("Roboto/roboto-regular.svg") format("svg");
+  src: url("Roboto/Roboto-regular.woff");
 }
 
 @font-face {
   font-family: "Shrikhand";
-  src: url("Shrikhand/shrikhand-regular.ttf");
-  src: url("Shrikhand/shrikhand-regular.woff") format("woff"), url("Shrikhand/shrikhand-regular.eot") format("eot"), url("Shrikhand/shrikhand-regular.svg") format("svg");
+  src: url("Shrikhand/shrikhand-regular.woff");
 }
 
 .footer {
