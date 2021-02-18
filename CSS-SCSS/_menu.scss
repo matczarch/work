@@ -1,25 +1,3 @@
-// ------------------------Mes polices------------------------
-@font-face {
-    font-family: "Roboto regular";
-    src: url("Roboto/Roboto-regular.ttf");
-    src: url("Roboto/roboto-regular.woff") format("woff"),
-      url("Roboto/roboto-regular.eot") format("eot"),
-      url("Roboto/roboto-regular.svg") format("svg");
-  }
-  @font-face {
-    font-family: "Shrikhand";
-    src: url("Shrikhand/shrikhand-regular.ttf");
-    src: url("Shrikhand/shrikhand-regular.woff") format("woff"),
-      url("Shrikhand/shrikhand-regular.eot") format("eot"),
-      url("Shrikhand/shrikhand-regular.svg") format("svg");
-  }
-  // ------------------------Mes variables------------------------
-$text: "Roboto regular";
-$title: "Shrikhand";
-
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
 //------------------------Mise en forme------------------------
 body {
     font-family: $text;
@@ -74,7 +52,6 @@ body {
     &__btn {
         height: 2em;
         width: 2em;
-        font-size: 1.2em;
         //background-color: transparent;
         border: transparent 0px solid;
         padding: 0;
@@ -210,12 +187,9 @@ body {
         margin: -1em -6em -1em -1em;
         transition-duration: 0.5s;
     }
-    &:hover &__confirmation {
-        margin-right: -1em;
-      }
     &:active &__confirmation {
         margin-right: -1em;
-    }
+      }
     
       &__checkIcon {
         width: 2em;
@@ -231,9 +205,6 @@ body {
     
       }
     
-      &:hover &__checkIcon {
-        transform: rotate(0);
-      }
       &:active &__checkIcon {
         transform: rotate(0);
       }
@@ -273,48 +244,6 @@ body {
 
      
 }
-//------------------------Mise en forme du footer------------------------
-.footer {
-    background-color: #353535;
-    .contain {
-      display: flex; 
-      flex-direction: column;
-      padding: 1em; 
-    }
-   
-    &__logo {
-      color: white; 
-      font-family: $title;
-      font-size: 1.2em; 
-      margin: 0;
-      margin-bottom: 1em;
-    }
-    &__list {
-      list-style: none;
-      padding: 0; 
-      margin: 0; 
-    }
-    &__listElt {
-      margin: 0.5em 0; 
-  
-      &:first-child {
-        margin-top: 0; 
-      }
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-    &__link {
-      color: white; 
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-    &__icon {
-      width: 1.2em;
-      margin-right: 0.5em;
-    }
-  }
+
 
 

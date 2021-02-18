@@ -1,18 +1,4 @@
-// ------------------------Mes polices------------------------
-@font-face {
-  font-family: "Roboto regular";
-  src: url("Roboto/Roboto-regular.ttf");
-  src: url("Roboto/roboto-regular.woff") format("woff"),
-    url("Roboto/roboto-regular.eot") format("eot"),
-    url("Roboto/roboto-regular.svg") format("svg");
-}
-@font-face {
-  font-family: "Shrikhand";
-  src: url("Shrikhand/shrikhand-regular.ttf");
-  src: url("Shrikhand/shrikhand-regular.woff") format("woff"),
-    url("Shrikhand/shrikhand-regular.eot") format("eot"),
-    url("Shrikhand/shrikhand-regular.svg") format("svg");
-}
+
 // ------------------------Mes variables------------------------
 $text: "Roboto regular";
 $title: "Shrikhand";
@@ -21,7 +7,8 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
-//------------------------Mise en forme------------------------
+//------------------------Mise en forme------------------------je m'appelle mat 
+
 body {
   font-family: $text;
 }
@@ -147,7 +134,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  .menu {
+  .presentation {
     display: flex; 
     justify-content: space-around;
     margin: 10px 3px 10px 10px;
@@ -161,11 +148,14 @@ body {
     color: inherit;
 
     &__img {
+      width: 100%;
       height: 12.5em;
-      width: 25em;
       border-radius: 1em 1em 0 0;
       box-shadow: none;
       object-fit: cover;
+      @media (min-width:60em) {
+        width: 25em;
+      }
     }
     &__badge {
       background-color: $color-tertiary;
@@ -189,11 +179,12 @@ body {
       align-items: center; 
     }
     &__btn {
-      height: 2rem;
-      width: 2rem;
+      height: 2em;
+      width: 2em;
       padding: 0;
       display:flex;
       align-items:center;
+      background-color: black;
       justify-content:center;
       position: absolute;
       right: 2em; 
@@ -202,48 +193,5 @@ body {
     &__like {
       background-color: white!important;
     }
-  }
-}
-//------------------------Mise en forme du footer------------------------
-.footer {
-  background-color: #353535;
-  .contain {
-    display: flex; 
-    flex-direction: column;
-    padding: 1em; 
-  }
- 
-  &__logo {
-    color: white; 
-    font-family: $title;
-    font-size: 1.2em; 
-    margin: 0;
-    margin-bottom: 1em;
-  }
-  &__list {
-    list-style: none;
-    padding: 0; 
-    margin: 0; 
-  }
-  &__listElt {
-    margin: 0.5em 0; 
-
-    &:first-child {
-      margin-top: 0; 
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  &__link {
-    color: white; 
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  &__icon {
-    width: 1.2em;
-    margin-right: 0.5em;
   }
 }
