@@ -28,12 +28,12 @@
             transform: translateY(0);
   }
   25% {
-    -webkit-transform: translateY(0.5rem);
-            transform: translateY(0.5rem);
+    -webkit-transform: translateY(0.5em);
+            transform: translateY(0.5em);
   }
   75% {
-    -webkit-transform: translateY(-0.5rem);
-            transform: translateY(-0.5rem);
+    -webkit-transform: translateY(-0.5em);
+            transform: translateY(-0.5em);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -47,12 +47,12 @@
             transform: translateY(0);
   }
   25% {
-    -webkit-transform: translateY(0.5rem);
-            transform: translateY(0.5rem);
+    -webkit-transform: translateY(0.5em);
+            transform: translateY(0.5em);
   }
   75% {
-    -webkit-transform: translateY(-0.5rem);
-            transform: translateY(-0.5rem);
+    -webkit-transform: translateY(-0.5em);
+            transform: translateY(-0.5em);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -116,16 +116,16 @@
 }
 
 .loader {
-  position: fixed;
   height: 100%;
   width: 100%;
+  position: fixed;
   left: 0;
   top: 0;
   background-color: white;
-  -webkit-animation: loader 0.01s;
-          animation: loader 0.01s;
-  -webkit-animation-delay: 1.75s;
-          animation-delay: 1.75s;
+  -webkit-animation: loader 0.1s;
+          animation: loader 0.1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   z-index: 10000;
@@ -146,8 +146,8 @@
   border-radius: 1rem;
   -webkit-animation: jump 1s;
           animation: jump 1s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
 }
 
 .loader__itemContainer {
@@ -420,6 +420,7 @@ body {
   height: 2em;
   width: 2em;
   padding: 0;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -533,6 +534,10 @@ body {
   opacity: 1;
 }
 
+.menu__btn:active::before {
+  opacity: 1;
+}
+
 .menu__btn::before {
   content: "";
   width: 100%;
@@ -543,8 +548,8 @@ body {
   left: 0;
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .menu__like {
@@ -569,6 +574,10 @@ body {
 }
 
 .menu__btn:hover .menu__like--noR {
+  opacity: 0;
+}
+
+.menu__btn:active .menu__like--noR {
   opacity: 0;
 }
 

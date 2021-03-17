@@ -65,6 +65,9 @@ body {
         &:hover::before {
           opacity: 1;
         }
+        &:active::before {
+          opacity: 1; 
+        }
         
         &::before {
             content: "";
@@ -75,7 +78,7 @@ body {
             top: 0;
             left: 0;
             background:linear-gradient(to bottom right, $color-secondary, $color-primary);
-            transition: 1s;
+            transition: 0.5s;
         }
       }
       &__like {
@@ -92,6 +95,13 @@ body {
         mix-blend-mode: lighten;
       }
       &__btn:hover {
+        .menu__like {
+          &--noR {
+            opacity: 0;
+          }
+        }
+      }
+      &__btn:active {
         .menu__like {
           &--noR {
             opacity: 0;

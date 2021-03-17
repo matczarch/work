@@ -27,14 +27,15 @@ $color-tertiary: #99E2D0;
     transform: translateY(0);
   }
   25% {
-    transform: translateY(0.5rem);
+    transform: translateY(0.5em);
   }
   75% {
-    transform: translateY(-0.5rem);
+    transform: translateY(-0.5em);
   }
   100% {
     transform: translateY(0);
   }
+
   // 0% {
   //   transform: translateY(0);
   // }
