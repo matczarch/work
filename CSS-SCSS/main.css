@@ -573,6 +573,10 @@ body {
   mix-blend-mode: lighten;
 }
 
+.menu__btn:hover {
+  outline: none;
+}
+
 .menu__btn:hover .menu__like--noR {
   opacity: 0;
 }
@@ -719,6 +723,10 @@ body {
   margin-right: -1em;
 }
 
+.menuItem:active .menuItem__confirmation {
+  margin-right: -1em;
+}
+
 .menuItem__checkIcon {
   width: 2em;
   height: 2em;
@@ -741,6 +749,11 @@ body {
 }
 
 .menuItem:hover .menuItem__checkIcon {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.menuItem:active .menuItem__checkIcon {
   -webkit-transform: rotate(0);
           transform: rotate(0);
 }

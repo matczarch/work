@@ -95,6 +95,7 @@ body {
         mix-blend-mode: lighten;
       }
       &__btn:hover {
+        outline: none;
         .menu__like {
           &--noR {
             opacity: 0;
@@ -200,6 +201,9 @@ body {
     &:hover &__confirmation {
         margin-right: -1em;
       }
+    &:active &__confirmation {
+        margin-right: -1em;
+      }
     
       &__checkIcon {
         width: 2em;
@@ -215,6 +219,9 @@ body {
       }
     
       &:hover &__checkIcon {
+        transform: rotate(0);
+      }
+      &:active &__checkIcon {
         transform: rotate(0);
       }
       
