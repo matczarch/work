@@ -1,6 +1,8 @@
 //------------------------Mise en forme------------------------
 body {
     font-family: $text;
+    margin: 0;
+    padding: 0px;  
 }
 
 .header {
@@ -142,7 +144,7 @@ body {
 @keyframes FadeinUp {
     0% {
       transform: translateY(100px); 
-      opacity:0;
+      opacity: 0;
     }
     100% {
       transform: translateY(0px);
@@ -225,7 +227,6 @@ body {
         transform: rotate(0);
       }
       
-
       &__icon {
         color: $color-tertiary;
       }
