@@ -113,10 +113,10 @@ body {
       }
 }
 .submenus {
-    display: grid; 
-    @media (min-width:64rem) {
-        grid-template-columns: repeat(3,1fr);
-      }
+  display: grid; 
+  @media (min-width:64rem) {
+      grid-template-columns: repeat(3,1fr);
+    }
 }
 
 .submenu {
