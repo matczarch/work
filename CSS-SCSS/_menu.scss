@@ -113,9 +113,11 @@ body {
       }
 }
 .submenus {
-  display: grid; 
+  display: flex; 
+  flex-direction: column;
   @media (min-width:64rem) {
-      grid-template-columns: repeat(3,1fr);
+      flex-direction: row;
+      justify-content: center;
     }
 }
 
