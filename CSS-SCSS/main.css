@@ -611,6 +611,7 @@ body {
 
 .submenu {
   max-width: 100%;
+  width: 100%;
   overflow: hidden;
   padding: 0 1em;
 }
