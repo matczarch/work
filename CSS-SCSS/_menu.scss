@@ -125,7 +125,7 @@ body {
     max-width: 100%;
     width: 100%;
     overflow: hidden;
-    padding: 0 1em; 
+    padding: 0; 
     &__title {
         text-transform: uppercase;
         position: relative; 
@@ -155,7 +155,7 @@ body {
     }
   }
 .menuItem {
-    max-width: 100%;
+    max-width: 90%;
     display: flex;
     background-color: white;
     padding: 1em; 

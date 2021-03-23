@@ -615,7 +615,7 @@ body {
   max-width: 100%;
   width: 100%;
   overflow: hidden;
-  padding: 0 1em;
+  padding: 0;
 }
 
 .submenu__title {
@@ -662,7 +662,7 @@ body {
 }
 
 .menuItem {
-  max-width: 100%;
+  max-width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
